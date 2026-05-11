@@ -1,0 +1,9 @@
+.DS_Store
+resume.tex
+CV_Yaowen_Shi.tex
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
