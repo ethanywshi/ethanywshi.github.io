@@ -245,25 +245,51 @@
       font-size: 13px;
     }
 
-    .paper-placeholder {
+    .paper-card {
       display: grid;
-      grid-template-columns: 128px minmax(0, 1fr);
-      gap: 18px;
+      grid-template-columns: minmax(140px, 220px) minmax(0, 1fr);
+      gap: 22px;
       align-items: center;
       padding: 16px;
-      border: 1px dashed #c8beb0;
+      border: 1px solid rgba(222, 215, 202, 0.92);
       border-radius: 16px;
-      background: rgba(246, 243, 238, 0.68);
-      color: var(--soft);
+      background:
+        linear-gradient(180deg, rgba(255, 253, 250, 0.98), rgba(246, 243, 238, 0.78));
     }
 
-    .thumb {
+    .paper-image {
+      width: 100%;
+      max-width: 220px;
       aspect-ratio: 4 / 3;
+      display: block;
+      object-fit: contain;
+      object-position: center;
+      justify-self: center;
       border-radius: 12px;
-      background:
-        linear-gradient(135deg, rgba(21, 94, 117, 0.16), rgba(161, 98, 7, 0.14)),
-        repeating-linear-gradient(45deg, transparent 0 10px, rgba(255,255,255,0.32) 10px 20px);
       border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .paper-meta {
+      color: var(--gold);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .paper-title {
+      margin: 5px 0 8px;
+      font-size: 18px;
+      line-height: 1.28;
+      font-weight: 700;
+    }
+
+    .paper-text {
+      color: var(--soft);
+      font-size: 14.8px;
+      line-height: 1.58;
     }
 
     .project-grid {
@@ -297,6 +323,11 @@
       border-radius: 10px;
       border: 1px solid var(--line);
       background: #fff;
+    }
+
+    .project-image-compact {
+      width: min(100%, 240px);
+      justify-self: center;
     }
 
     .project-topline {
@@ -466,7 +497,7 @@
         overflow-wrap: break-word;
       }
 
-      .paper-placeholder,
+      .paper-card,
       .item {
         grid-template-columns: 1fr;
       }
@@ -529,11 +560,16 @@
       <section id="papers">
         <div class="section-title">
           <h3>Papers</h3>
-          <span class="section-note">Reserved</span>
+          <span class="section-note">Publications</span>
         </div>
-        <div class="paper-placeholder">
-          <div class="thumb" aria-hidden="true"></div>
-          <p>Selected papers will be added here.</p>
+        <div class="paper-card">
+          <img class="paper-image" src="images/symground-pipeline.png" alt="SymGround pipeline overview">
+          <div>
+            <div class="paper-meta">Tech Report · Under Review</div>
+            <p class="paper-title">SymGround: Visual Program Synthesis with Symbol-to-Vision Grounding</p>
+            <p class="paper-text"><strong>Yaowen Shi</strong>, Jinxiu Liu</p>
+            <p class="paper-text">A framework for executable visual artifact generation that turns each revision into a testable symbol-to-vision hypothesis. SymGround uses visual attribution, evidence-guided editing, and edit-render memory to improve slide generation and 3D graphics editing while reducing token usage and invalid executions.</p>
+          </div>
         </div>
       </section>
 
@@ -560,19 +596,19 @@
             <a class="project-link" href="https://github.com/Breevio/OpenDinq">View repository</a>
           </article>
           <article class="project-card">
+            <img class="project-image project-image-compact" src="images/symground-pipeline.png" alt="SymGround symbol-to-vision grounding pipeline">
             <div class="project-topline">
-              <span>GitHub</span>
-              <span>Coming soon</span>
+              <span>Research</span>
+              <span>Tech Report · Under Review</span>
             </div>
-            <p class="project-title">Multi-Agent Blender Generation System</p>
-            <p class="project-text">A system for 2D/3D/4D generation in Blender that coordinates visual reasoning agents and symbolic-program agents to turn visual intent into structured, editable scenes, inspired by vision-as-inverse-graphics workflows.</p>
+            <p class="project-title">SymGround</p>
+            <p class="project-text">A visual program synthesis pipeline that grounds rendered residuals into editable program symbols. It separates visual attribution from evidence-guided editing, then accumulates edit-render memory to revise executable slides and Blender scenes more reliably.</p>
             <div class="project-tags">
-              <span class="project-tag">Multi-Agent Systems</span>
-              <span class="project-tag">Vision as Inverse Graphics</span>
-              <span class="project-tag">2D / 3D / 4D Generation</span>
-              <span class="project-tag">Blender</span>
+              <span class="project-tag">Symbol-to-Vision Grounding</span>
+              <span class="project-tag">Visual Program Synthesis</span>
+              <span class="project-tag">Executable Visual Artifacts</span>
+              <span class="project-tag">Blender / Slides</span>
             </div>
-            <a class="project-link" href="#" aria-label="Project link coming soon">Repository pending</a>
           </article>
         </div>
       </section>
