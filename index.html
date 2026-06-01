@@ -273,17 +273,35 @@
       background: #fff;
     }
 
-    .paper-meta {
-      color: var(--gold);
+    .paper-authors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin: 0 0 7px;
+      color: var(--soft);
+      font-size: 14.8px;
+      line-height: 1.35;
+    }
+
+    .paper-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 20px;
+      padding: 2px 8px;
+      border: 1px solid rgba(166, 99, 15, 0.24);
+      border-radius: 999px;
+      color: #8a520d;
+      background: rgba(166, 99, 15, 0.07);
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
     .paper-title {
-      margin: 5px 0 8px;
+      margin: 0 0 8px;
       font-size: 18px;
       line-height: 1.28;
       font-weight: 700;
@@ -562,9 +580,8 @@
         <div class="paper-card">
           <img class="paper-image" src="images/symground-pipeline.png" alt="SymGround pipeline overview">
           <div>
-            <div class="paper-meta">Tech Report</div>
             <p class="paper-title">SymGround: Visual Program Synthesis with Symbol-to-Vision Grounding</p>
-            <p class="paper-text"><strong>Yaowen Shi</strong>, Jinxiu Liu</p>
+            <p class="paper-authors"><span><strong>Yaowen Shi</strong>, Jinxiu Liu</span><span class="paper-badge">Tech Report</span></p>
             <p class="paper-text">A framework for executable visual artifact generation that turns each revision into a testable symbol-to-vision hypothesis. SymGround uses visual attribution, evidence-guided editing, and edit-render memory to improve slide generation and 3D graphics editing while reducing token usage and invalid executions.</p>
           </div>
         </div>
