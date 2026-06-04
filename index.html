@@ -248,6 +248,39 @@
       font-size: 13px;
     }
 
+    .vision-card {
+      overflow: hidden;
+      padding: 0;
+      background:
+        radial-gradient(circle at top left, rgba(21, 94, 117, 0.08), transparent 34%),
+        var(--paper);
+    }
+
+    .vision-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 22px 25px 14px;
+      border-bottom: 1px solid rgba(222, 215, 202, 0.8);
+    }
+
+    .vision-frame {
+      margin: 0;
+      padding: 18px;
+      overflow-x: auto;
+    }
+
+    .vision-image {
+      width: 100%;
+      min-width: 720px;
+      display: block;
+      border: 1px solid rgba(222, 215, 202, 0.9);
+      border-radius: 16px;
+      background: #fffdfa;
+      box-shadow: 0 20px 44px rgba(62, 50, 35, 0.08);
+    }
+
     .paper-card {
       display: grid;
       grid-template-columns: minmax(140px, 220px) minmax(0, 1fr);
@@ -542,6 +575,7 @@
       </div>
       <nav aria-label="Page navigation">
         <a href="#about">About</a>
+        <a href="#vision">Vision</a>
         <a href="#experience">Experience</a>
         <a href="#papers">Papers</a>
         <a href="#projects">Projects</a>
@@ -556,6 +590,16 @@
           I am an undergraduate student at South China University of Technology. My research focuses on multimodal agent systems that turn human intent into controllable visual and interactive content. I am broadly interested in agents for image generation, video generation, 3D/4D generation, visual reasoning, and iterative editing: systems that can decompose creative tasks, coordinate specialized models or tools, and improve outputs through planning, feedback, and self-reflection. I work closely with <a href="https://brandon-liu-jx.github.io/">Jinxiu Liu</a>.
         </p>
       </div>
+
+      <section class="vision-card" id="vision">
+        <div class="vision-header">
+          <h3>Research Vision</h3>
+          <span class="section-note">Long-term goal</span>
+        </div>
+        <figure class="vision-frame">
+          <img class="vision-image" src="images/research-goal.png" alt="Long-term research goal: multimodal agents for open-ended creation" loading="lazy">
+        </figure>
+      </section>
 
       <section id="experience">
         <div class="section-title">
