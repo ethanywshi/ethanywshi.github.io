@@ -19,6 +19,8 @@
       --accent: #155e75;
       --accent-soft: #e6f2f4;
       --gold: #a16207;
+      --font-heading: "Avenir Next", "Helvetica Neue", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-body: "Avenir Next", "Helvetica Neue", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     * {
@@ -37,7 +39,7 @@
         var(--bg);
       background-size: 42px 42px;
       color: var(--ink);
-      font-family: ui-serif, Georgia, "Times New Roman", serif;
+      font-family: var(--font-body);
       line-height: 1.62;
       overflow-x: hidden;
     }
@@ -94,7 +96,8 @@
       margin: 24px 0 3px;
       font-size: 30px;
       line-height: 1.08;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.03em;
+      font-family: var(--font-heading);
       font-weight: 700;
     }
 
@@ -164,15 +167,24 @@
     }
 
     .intro {
-      min-height: 248px;
+      min-height: 0;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: clamp(24px, 3.6vw, 36px);
-      box-shadow: 0 18px 42px rgba(62, 50, 35, 0.065);
+      padding: 18px 25px 30px;
+      font-family: var(--font-body);
+    }
+
+    .intro-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+      min-width: 0;
+    }
+
+    .intro-body {
+      max-width: 76ch;
     }
 
     .kicker {
@@ -188,17 +200,26 @@
     .intro h2 {
       margin: 0;
       max-width: 720px;
-      font-size: clamp(29px, 3.45vw, 40px);
-      line-height: 1.12;
-      letter-spacing: -0.02em;
+      color: var(--ink);
+      font-size: 25px;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
     }
 
     .intro p {
-      margin: 20px 0 0;
-      max-width: 690px;
-      color: var(--soft);
-      font-size: 16.5px;
-      line-height: 1.68;
+      margin: 14px 0 0;
+      max-width: 76ch;
+      color: #252b35;
+      font-size: 15.4px;
+      font-weight: 400;
+      line-height: 1.78;
+      letter-spacing: -0.01em;
+    }
+
+    .intro p:first-of-type {
+      margin-top: 0;
     }
 
     .intro p a {
@@ -224,8 +245,10 @@
 
     h3 {
       margin: 0;
+      font-family: var(--font-heading);
       font-size: 21px;
       line-height: 1.2;
+      font-weight: 700;
     }
 
     section > p {
@@ -597,9 +620,20 @@
 
     <main>
       <div class="intro" id="about">
-        <p>
-          I am an undergraduate student at South China University of Technology. My research focuses on multimodal agent systems that turn human intent into controllable visual and interactive content. I am broadly interested in agents for image generation, video generation, 3D/4D generation, visual reasoning, and iterative editing: systems that can decompose creative tasks, coordinate specialized models or tools, and improve outputs through planning, feedback, and self-reflection. I work closely with <a href="https://brandon-liu-jx.github.io/">Jinxiu Liu</a>.
-        </p>
+        <div class="intro-header">
+          <h2>About me</h2>
+        </div>
+        <div class="intro-body">
+          <p>
+            I am an undergraduate student at South China University of Technology. I work closely with <a href="https://brandon-liu-jx.github.io/">Jinxiu&nbsp;Liu</a> on multimodal agent systems for visual and interactive content creation.
+          </p>
+          <p>
+            My research focuses on agents that translate human intent into controllable outputs across image generation, video generation, 3D/4D generation, visual reasoning, and iterative editing.
+          </p>
+          <p>
+            I am especially interested in systems that can decompose creative tasks, coordinate specialized models or tools, and improve their outputs through planning, feedback, and self-reflection.
+          </p>
+        </div>
       </div>
 
       <section class="vision-card" id="vision">
