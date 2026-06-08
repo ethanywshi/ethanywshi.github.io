@@ -533,8 +533,7 @@
 
     @media (max-width: 620px) {
       .page {
-        width: calc(100vw - 48px);
-        max-width: 1120px;
+        width: min(calc(100% - 48px), 1120px);
         padding-top: 18px;
       }
 
@@ -558,8 +557,12 @@
         padding: 24px;
       }
 
+      .intro-body {
+        max-width: 100%;
+      }
+
       .kicker {
-        max-width: 260px;
+        max-width: 100%;
         font-size: 9.5px;
         letter-spacing: 0.08em;
         line-height: 1.5;
@@ -567,14 +570,14 @@
       }
 
       .intro h2 {
-        max-width: 260px;
+        max-width: 100%;
         font-size: 22px;
         line-height: 1.14;
         overflow-wrap: break-word;
       }
 
       .intro p {
-        max-width: 260px;
+        max-width: 100%;
         font-size: 14.5px;
         line-height: 1.58;
         overflow-wrap: break-word;
