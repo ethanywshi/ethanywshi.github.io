@@ -54,6 +54,12 @@
       text-underline-offset: 3px;
     }
 
+    a:focus-visible {
+      outline: 2px solid rgba(21, 94, 117, 0.28);
+      outline-offset: 4px;
+      border-radius: 7px;
+    }
+
     .page {
       width: min(1100px, calc(100% - 38px));
       margin: 0 auto;
@@ -137,11 +143,14 @@
       border-radius: 999px;
       background: var(--paper);
       color: var(--accent);
+      transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
     }
 
     .link-pill:hover {
       background: var(--accent-soft);
+      border-color: rgba(21, 94, 117, 0.24);
       text-decoration: none;
+      transform: translateY(-1px);
     }
 
     nav {
@@ -156,6 +165,7 @@
 
     nav a {
       color: var(--soft);
+      width: max-content;
     }
 
     nav a:hover {
@@ -206,6 +216,8 @@
       font-weight: 700;
       line-height: 1.15;
       letter-spacing: -0.03em;
+      padding-bottom: 5px;
+      border-bottom: 4px solid rgba(31, 35, 40, 0.72);
     }
 
     .intro p {
@@ -227,7 +239,7 @@
     }
 
     section {
-      margin-top: 22px;
+      margin-top: 26px;
       background: rgba(255, 253, 250, 0.88);
       border: 1px solid var(--line);
       border-radius: 22px;
@@ -245,10 +257,14 @@
 
     h3 {
       margin: 0;
+      width: max-content;
+      max-width: 100%;
       font-family: var(--font-heading);
       font-size: 21px;
       line-height: 1.2;
       font-weight: 700;
+      padding-bottom: 4px;
+      border-bottom: 4px solid rgba(31, 35, 40, 0.7);
     }
 
     section > p {
