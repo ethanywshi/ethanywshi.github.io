@@ -360,7 +360,8 @@
 
     .vision-image {
       width: 100%;
-      min-width: 720px;
+      min-width: 0;
+      max-width: 100%;
       height: auto;
       display: block;
       border: 0;
@@ -621,11 +622,27 @@
 
       aside {
         grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
       }
 
       .portrait {
         width: 138px;
         grid-row: auto;
+      }
+
+      h1 {
+        margin-top: 18px;
+      }
+
+      .links,
+      nav {
+        justify-content: center;
+      }
+
+      nav {
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .intro {
@@ -670,15 +687,6 @@
       .item-logo {
         width: 44px;
         height: 44px;
-      }
-
-      .vision-image {
-        min-width: 0;
-        max-width: 100%;
-      }
-
-      .vision-frame {
-        overflow-x: hidden;
       }
     }
   </style>
