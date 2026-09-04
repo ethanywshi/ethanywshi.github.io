@@ -170,8 +170,10 @@
     }
 
     nav {
-      display: grid;
-      gap: 7px;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 18px;
+      row-gap: 8px;
       margin-top: 24px;
       padding-top: 17px;
       border-top: 1px solid var(--line);
@@ -598,10 +600,8 @@
         margin-top: 0;
       }
 
-      nav {
-        grid-column: 1 / -1;
-        grid-template-columns: repeat(4, max-content);
-        gap: 14px;
+      main {
+        margin-top: 36px;
       }
     }
 
@@ -667,8 +667,18 @@
         grid-template-columns: 1fr;
       }
 
-      nav {
-        grid-template-columns: repeat(2, max-content);
+      .item-logo {
+        width: 44px;
+        height: 44px;
+      }
+
+      .vision-image {
+        min-width: 0;
+        max-width: 100%;
+      }
+
+      .vision-frame {
+        overflow-x: hidden;
       }
     }
   </style>
